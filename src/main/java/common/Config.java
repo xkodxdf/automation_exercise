@@ -13,6 +13,6 @@ public abstract class Config {
     final FirefoxOptions firefoxOptions = new FirefoxOptions();
     final String BROWSER = chromeDriver;
     final String BROWSER_WINDOW_SIZE = "--window-size=1920,1080";
-    final int IMPLICITLY_WAIT = 5;
+    final int IMPLICITLY_WAIT_SEC = 10;
 
 }

@@ -1,0 +1,61 @@
+package pages.base;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.Objects;
+
+
+public abstract class BasePage {
+
+    private final WebDriver driver;
+    private WebDriverWait webDriverWait5;
+    private WebDriverWait webDriverWait10;
+
+    protected BasePage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    protected WebDriver getDriver() {
+
+        return driver;
+    }
+
+
+    protected WebDriverWait getWait5() {
+        if (Objects.isNull(webDriverWait5)) {
+            webDriverWait5 = new WebDriverWait(driver, Duration.ofSeconds(5));
+        }
+
+        return webDriverWait5;
+    }
+
+    protected WebDriverWait getWait10() {
+        if (Objects.isNull(webDriverWait10)) {
+            webDriverWait10 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        }
+
+        return webDriverWait10;
+    }
+
+   protected String getTitle() {
+
+        return getDriver().getTitle();
+    }
+
+    protected String getCurrentUrl() {
+
+        return getDriver().getCurrentUrl();
+    }
+
+    protected void click(WebElement element) {
+        getWait5().until(ExpectedConditions.visibilityOf(element));
+        getWait5().until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
+}

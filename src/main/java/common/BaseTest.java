@@ -13,10 +13,12 @@ public abstract class BaseTest {
 
 
     public WebDriver getDriver() {
+
         return driver;
     }
 
     public String getBaseUrl() {
+
         return BASE_URL;
     }
 
@@ -31,7 +33,7 @@ public abstract class BaseTest {
         driver.quit();
     }
 
-    protected MainPage openBaseUrl() {
+    protected MainPage openMainPage() {
         driver.get(BASE_URL);
 
         return new MainPage(getDriver());

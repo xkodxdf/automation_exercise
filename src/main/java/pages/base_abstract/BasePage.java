@@ -1,9 +1,8 @@
-package pages.base;
+package pages.base_abstract;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -44,7 +43,7 @@ public abstract class BasePage {
         return webDriverWait10;
     }
 
-   protected String getTitle() {
+    protected String getTitle() {
 
         return getDriver().getTitle();
     }
@@ -57,5 +56,10 @@ public abstract class BasePage {
     protected void click(WebElement element) {
         getWait5().until(ExpectedConditions.visibilityOf(element));
         getWait5().until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
+
+    protected boolean verifyElementVisibility(WebElement element) {
+
+        return element.isDisplayed();
     }
 }

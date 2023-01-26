@@ -1,14 +1,23 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
-import pages.base_abstract.BasePage;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import pages.base_abstract.NavigationBarPage;
 
-import java.util.jar.Attributes;
 
 public class LoginPage extends NavigationBarPage {
 
+    @FindBy(xpath = "//div[@class='signup-form']/h2")
+    private WebElement h2SignUpForm;
+
+
     protected LoginPage(WebDriver driver) {
         super(driver);
+    }
+
+    public WebElement getH2SignUpForm() {
+
+        return h2SignUpForm;
     }
 }

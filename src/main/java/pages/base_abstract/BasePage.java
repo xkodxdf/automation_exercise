@@ -54,6 +54,11 @@ public abstract class BasePage {
         return getDriver().getCurrentUrl();
     }
 
+    protected String getText(WebElement element) {
+
+        return element.getText();
+    }
+
     protected void click(WebElement element) {
         getWait5().until(ExpectedConditions.visibilityOf(element));
         getWait5().until(ExpectedConditions.elementToBeClickable(element)).click();
@@ -62,5 +67,10 @@ public abstract class BasePage {
     protected boolean verifyElementVisibility(WebElement element) {
 
         return element.isDisplayed();
+    }
+
+    protected void input(String text, WebElement element) {
+
+        element.sendKeys(text);
     }
 }

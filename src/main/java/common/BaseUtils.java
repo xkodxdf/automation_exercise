@@ -14,11 +14,11 @@ final class BaseUtils extends Config {
         switch (BROWSER) {
             case chromeDriver:
                 System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-                driver = new ChromeDriver(chromeOptions.addArguments(BROWSER_WINDOW_SIZE));
+                driver = new ChromeDriver(chromeOptions.addArguments(CHROME_WINDOW_SIZE));
                 break;
             case firefoxDriver:
                 System.setProperty("webdriver.gecko.driver", getGeckoDriverPath);
-                driver = new FirefoxDriver(firefoxOptions.addArguments(BROWSER_WINDOW_SIZE));
+                driver = new FirefoxDriver(firefoxOptions.addArguments(FIREFOX_WINDOW_WIDTH, FIREFOX_WINDOW_HEIGHT));
                 break;
             default:
                 Assert.fail("!!!incorrect parameter in browser variable!!!\n" +

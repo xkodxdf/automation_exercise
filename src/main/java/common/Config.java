@@ -11,8 +11,10 @@ public abstract class Config {
     final String firefoxDriver = "firefox";
     final String getGeckoDriverPath = "src/main/resources/web_driver/geckodriver.exe";
     final FirefoxOptions firefoxOptions = new FirefoxOptions();
-    final String BROWSER = chromeDriver;
-    final String BROWSER_WINDOW_SIZE = "--window-size=1920,1080";
+    final String BROWSER = firefoxDriver;
+    final String CHROME_WINDOW_SIZE = "--window-size=1920,1080";
+    final String FIREFOX_WINDOW_WIDTH = "--width=1920";
+    final String FIREFOX_WINDOW_HEIGHT = "--height=1080";
     final int IMPLICITLY_WAIT_SEC = 10;
 
 }

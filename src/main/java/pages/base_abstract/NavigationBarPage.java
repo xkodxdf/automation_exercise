@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 public class NavigationBarPage extends BasePage {
 
-    protected NavigationBarPage(WebDriver driver) {
+    public NavigationBarPage(WebDriver driver) {
         super(driver);
     }
 }

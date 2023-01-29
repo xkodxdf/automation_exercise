@@ -224,6 +224,13 @@ public class SignUpPage extends NavigationBarPage {
         return new SignUpPage(getDriver());
     }
 
+    public SignUpPage inputDateOfBirth(String day, String month, String year) {
+
+        return selectDayOfBirth(day)
+                .selectMonthOfBirth(month)
+                .selectYearOfBirth(year);
+    }
+
     public SignUpPage selectNewsletterCheckBox() {
         click(newsletterCheckBox);
 

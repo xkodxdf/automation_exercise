@@ -14,6 +14,18 @@ public class MainPage extends NavigationBarPage {
     @FindBy(xpath = "//a[@href='/login']")
     private WebElement signUpLoginLink;
 
+    @FindBy(xpath = "//a[text()[contains(.,'Logged in as')]]")
+    private WebElement loggedInAsText;
+
+    @FindBy(xpath = "//a[@href='/delete_account']")
+    private WebElement deleteAccount;
+
+
+    public MainPage(WebDriver driver) {
+        super(driver);
+    }
+
+
     public WebElement getSignUpLoginLink() {
 
         return signUpLoginLink;
@@ -24,8 +36,14 @@ public class MainPage extends NavigationBarPage {
         return logo;
     }
 
-    public MainPage(WebDriver driver) {
-        super(driver);
+    public WebElement getLoggedInAsText() {
+
+        return loggedInAsText;
+    }
+
+    public WebElement getDeleteAccount() {
+
+        return deleteAccount;
     }
 
 
@@ -33,5 +51,16 @@ public class MainPage extends NavigationBarPage {
         click(signUpLoginLink);
 
         return new LoginPage(getDriver());
+    }
+
+    public boolean isLogoDisplayed() {
+
+        return verifyElementVisibility(logo);
+    }
+
+    public DeleteAccountPage clickDeleteAccount() {
+        click(deleteAccount);
+
+        return new DeleteAccountPage(getDriver());
     }
 }

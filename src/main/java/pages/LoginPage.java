@@ -9,15 +9,63 @@ import pages.base_abstract.NavigationBarPage;
 public class LoginPage extends NavigationBarPage {
 
     @FindBy(xpath = "//div[@class='signup-form']/h2")
-    private WebElement h2SignUpForm;
+    private WebElement signUpHeader;
+
+    @FindBy(xpath = "//input[@data-qa='signup-name']")
+    private WebElement SignUpName;
+
+    @FindBy(xpath = "//input[@data-qa='signup-email']")
+    private WebElement SignUpEmail;
+
+    @FindBy(xpath = "//button[@data-qa='signup-button']")
+    private WebElement signUpButton;
 
 
-    protected LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 
-    public WebElement getH2SignUpForm() {
 
-        return h2SignUpForm;
+    public WebElement getSignUpHeader() {
+
+        return signUpHeader;
+    }
+
+    public WebElement getSignUpName() {
+
+        return SignUpName;
+    }
+
+    public WebElement getSignUpEmail() {
+
+        return SignUpEmail;
+    }
+
+    public WebElement getSignUpButton() {
+
+        return signUpButton;
+    }
+
+
+    public boolean isSignUpHeaderDisplayed() {
+        return verifyElementVisibility((signUpHeader));
+    }
+
+    public LoginPage inputSignUpName(String name) {
+        input(name, SignUpName);
+
+        return new LoginPage(getDriver());
+    }
+
+    public LoginPage inputSignUpEmail(String email) {
+        input(email, SignUpEmail);
+
+        return new LoginPage(getDriver());
+    }
+
+    public SignUpPage clickSignUpButton() {
+        click(signUpButton);
+
+        return new SignUpPage(getDriver());
     }
 }

@@ -11,7 +11,7 @@ import pages.DeleteAccountPage;
 public class DeleteAccountTest extends BaseTest {
 
     @Test
-    public void testRegisterUser() throws InterruptedException {
+    public void testRegisterUser() {
         Credentials creds = new Credentials();
         MainPage mainPage = openMainPage();
 

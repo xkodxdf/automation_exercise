@@ -2,9 +2,9 @@ package pages.base_abstract;
 
 import org.openqa.selenium.WebDriver;
 
-public class NavigationBarPage extends BasePage {
+public class TopMenuPage extends BasePage {
 
-    public NavigationBarPage(WebDriver driver) {
+    public TopMenuPage(WebDriver driver) {
         super(driver);
     }
 }

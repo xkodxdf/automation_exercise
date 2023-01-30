@@ -3,10 +3,10 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.base_abstract.NavigationBarPage;
+import pages.base_abstract.TopMenuPage;
 
 
-public class MainPage extends NavigationBarPage {
+public class MainPage extends TopMenuPage {
 
     @FindBy(xpath = "//a[@href='/']/img")
     private WebElement logo;

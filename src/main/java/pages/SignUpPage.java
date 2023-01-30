@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import pages.base_abstract.NavigationBarPage;
+import pages.base_abstract.TopMenuPage;
 
-public class SignUpPage extends NavigationBarPage {
+public class SignUpPage extends TopMenuPage {
 
     @FindBy(xpath = "//div[@class='login-form']/h2")
     private WebElement accountInfoHeader;

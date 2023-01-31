@@ -11,8 +11,29 @@ public class TopMenuPage extends BasePage {
     @FindBy(xpath = "//a[@href='/']/img")
     private WebElement logo;
 
-    @FindBy(xpath = "//a[@href='/login']")
+    @FindBy(xpath = "//ul/li[1]/a")
+    private WebElement homeLink;
+
+    @FindBy(xpath = "//ul/li[2]/a")
+    private WebElement productsLink;
+
+    @FindBy(xpath = "//ul/li[3]/a")
+    private WebElement cartLink;
+
+    @FindBy(xpath = "//ul/li[4]/a")
     private WebElement signUpLoginLink;
+
+    @FindBy(xpath = "//ul/li[5]/a")
+    private WebElement testCasesLink;
+
+    @FindBy(xpath = "//ul/li[6]/a")
+    private WebElement apiTestingLink;
+
+    @FindBy(xpath = "//ul/li[7]/a")
+    private WebElement videoTutorsLink;
+
+    @FindBy(xpath = "//ul/li[8]/a")
+    private WebElement contactUsLink;
 
     @FindBy(xpath = "//a[text()[contains(.,'Logged in as')]]")
     private WebElement loggedInAsText;
@@ -26,14 +47,49 @@ public class TopMenuPage extends BasePage {
     }
 
 
+    public WebElement getLogo() {
+
+        return logo;
+    }
+
+    public WebElement getHomeLink() {
+
+        return homeLink;
+    }
+
+    public WebElement getProductsLink() {
+
+        return productsLink;
+    }
+
+    public WebElement getCartLink() {
+
+        return cartLink;
+    }
+
     public WebElement getSignUpLoginLink() {
 
         return signUpLoginLink;
     }
 
-    public WebElement getLogo() {
+    public WebElement getTestCasesLink() {
 
-        return logo;
+        return testCasesLink;
+    }
+
+    public WebElement getApiTestingLink() {
+
+        return apiTestingLink;
+    }
+
+    public WebElement getVideoTutorsLink() {
+
+        return videoTutorsLink;
+    }
+
+    public WebElement getContactUsLink() {
+
+        return contactUsLink;
     }
 
     public WebElement getLoggedInAsText() {

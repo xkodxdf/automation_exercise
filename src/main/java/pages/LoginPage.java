@@ -8,8 +8,20 @@ import pages.base_abstract.TopMenuPage;
 
 public class LoginPage extends TopMenuPage {
 
+    @FindBy(xpath = "//div[@class='login-form']/h2")
+    private WebElement loginHeader;
+
     @FindBy(xpath = "//div[@class='signup-form']/h2")
     private WebElement signUpHeader;
+
+    @FindBy(xpath = "//input[@data-qa='login-email']")
+    private WebElement loginEmail;
+
+    @FindBy(xpath = "//input[@data-qa='login-password']")
+    private WebElement loginPassword;
+
+    @FindBy(xpath = "//button[@data-qa='login-button']")
+    private WebElement loginButton;
 
     @FindBy(xpath = "//input[@data-qa='signup-name']")
     private WebElement SignUpName;
@@ -26,9 +38,29 @@ public class LoginPage extends TopMenuPage {
     }
 
 
+    public WebElement getLoginHeader() {
+
+        return loginHeader;
+    }
+
     public WebElement getSignUpHeader() {
 
         return signUpHeader;
+    }
+
+    public WebElement getLoginEmail() {
+
+        return loginEmail;
+    }
+
+    public WebElement getLoginPassword() {
+
+        return loginPassword;
+    }
+
+    public WebElement getLoginButton() {
+
+        return loginButton;
     }
 
     public WebElement getSignUpName() {

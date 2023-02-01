@@ -44,15 +44,9 @@ public abstract class BasePage {
         return webDriverWait10;
     }
 
-    protected String getTitle() {
+    protected abstract String getTitle();
 
-        return getDriver().getTitle();
-    }
-
-    protected String getCurrentUrl() {
-
-        return getDriver().getCurrentUrl();
-    }
+    protected abstract String getCurrentUrl();
 
     protected String getText(WebElement element) {
 

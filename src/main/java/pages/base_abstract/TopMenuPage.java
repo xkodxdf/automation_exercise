@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import pages.DeleteAccountPage;
 import pages.LoginPage;
 
-public class TopMenuPage extends BasePage {
+public abstract class TopMenuPage extends BasePage {
 
     @FindBy(xpath = "//a[@href='/']/img")
     private WebElement logo;
@@ -102,6 +102,18 @@ public class TopMenuPage extends BasePage {
         return deleteAccount;
     }
 
+
+    @Override
+    public String getTitle() {
+
+        return getDriver().getTitle();
+    }
+
+    @Override
+    public String getCurrentUrl() {
+
+        return getDriver().getCurrentUrl();
+    }
 
     public LoginPage clickSignUpLogin() {
         click(signUpLoginLink);

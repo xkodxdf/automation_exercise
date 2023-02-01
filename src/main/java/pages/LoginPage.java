@@ -1,5 +1,6 @@
 package pages;
 
+import common.Credentials;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -94,8 +95,27 @@ public class LoginPage extends TopMenuPage {
         return new LoginPage(getDriver());
     }
 
+    public LoginPage inputSignUpName() {
+        input(new Credentials().getName(), SignUpName);
+
+        return new LoginPage(getDriver());
+    }
+
     public LoginPage inputSignUpEmail(String email) {
         input(email, SignUpEmail);
+
+        return new LoginPage(getDriver());
+    }
+
+    public LoginPage inputSignUpEmail() {
+        input(new Credentials().getEmail(), SignUpEmail);
+
+        return new LoginPage(getDriver());
+    }
+
+    public LoginPage fillSignUpForm() {
+        inputSignUpName();
+        inputSignUpEmail();
 
         return new LoginPage(getDriver());
     }

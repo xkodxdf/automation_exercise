@@ -1,5 +1,6 @@
 package pages;
 
+import common.Credentials;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -203,9 +204,22 @@ public class SignUpPage extends TopMenuPage {
         return new SignUpPage(getDriver());
     }
 
+    public SignUpPage inputPassword() {
+        input(new Credentials().getPassword(), passwordField);
+
+        return new SignUpPage(getDriver());
+    }
+
     public SignUpPage selectDayOfBirth(String day) {
         Select dayOfBirth = new Select(dayOfBirthDropDown);
         dayOfBirth.selectByValue(day);
+
+        return new SignUpPage(getDriver());
+    }
+
+    public SignUpPage selectDayOfBirth() {
+        Select dayOfBirth = new Select(dayOfBirthDropDown);
+        dayOfBirth.selectByValue(new Credentials().getDayOfBirth());
 
         return new SignUpPage(getDriver());
     }
@@ -217,9 +231,23 @@ public class SignUpPage extends TopMenuPage {
         return new SignUpPage(getDriver());
     }
 
+    public SignUpPage selectMonthOfBirth() {
+        Select monthOfBirth = new Select(monthOfBirthDropDown);
+        monthOfBirth.selectByValue(new Credentials().getMonthOfBirth());
+
+        return new SignUpPage(getDriver());
+    }
+
     public SignUpPage selectYearOfBirth(String year) {
         Select yearOfBirth = new Select(yearsOfBirthDropDown);
         yearOfBirth.selectByValue(year);
+
+        return new SignUpPage(getDriver());
+    }
+
+    public SignUpPage selectYearOfBirth() {
+        Select yearOfBirth = new Select(yearsOfBirthDropDown);
+        yearOfBirth.selectByValue(new Credentials().getYearOfBirth());
 
         return new SignUpPage(getDriver());
     }
@@ -229,6 +257,12 @@ public class SignUpPage extends TopMenuPage {
         return selectDayOfBirth(day)
                 .selectMonthOfBirth(month)
                 .selectYearOfBirth(year);
+    }
+
+    public SignUpPage inputDateOfBirth() {
+        return selectDayOfBirth()
+                .selectMonthOfBirth()
+                .selectYearOfBirth();
     }
 
     public SignUpPage selectNewsletterCheckBox() {
@@ -249,8 +283,20 @@ public class SignUpPage extends TopMenuPage {
         return new SignUpPage(getDriver());
     }
 
+    public SignUpPage inputFirstName() {
+        input(new Credentials().getFirstName(), firstName);
+
+        return new SignUpPage(getDriver());
+    }
+
     public SignUpPage inputLastName(String lastName) {
         input(lastName, this.lastName);
+
+        return new SignUpPage(getDriver());
+    }
+
+    public SignUpPage inputLastName() {
+        input(new Credentials().getLastName(), lastName);
 
         return new SignUpPage(getDriver());
     }
@@ -261,14 +307,32 @@ public class SignUpPage extends TopMenuPage {
         return new SignUpPage(getDriver());
     }
 
+    public SignUpPage inputCompany() {
+        input(new Credentials().getCompany(), companyName);
+
+        return new SignUpPage(getDriver());
+    }
+
     public SignUpPage inputAddress(String address) {
         input(address, this.address);
 
         return new SignUpPage(getDriver());
     }
 
+    public SignUpPage inputAddress() {
+        input(new Credentials().getAddress(), this.address);
+
+        return new SignUpPage(getDriver());
+    }
+
     public SignUpPage inputAddress2(String address2) {
         input(address2, this.address2);
+
+        return new SignUpPage(getDriver());
+    }
+
+    public SignUpPage inputAddress2() {
+        input(new Credentials().getAddress2(), address2);
 
         return new SignUpPage(getDriver());
     }
@@ -280,8 +344,21 @@ public class SignUpPage extends TopMenuPage {
         return new SignUpPage(getDriver());
     }
 
+    public SignUpPage selectCountry() {
+        Select selectCountry = new Select(countyDropDown);
+        selectCountry.selectByValue(new Credentials().getCountry());
+
+        return new SignUpPage(getDriver());
+    }
+
     public SignUpPage inputState(String state) {
         input(state, this.state);
+
+        return new SignUpPage(getDriver());
+    }
+
+    public SignUpPage inputState() {
+        input(new Credentials().getState(), state);
 
         return new SignUpPage(getDriver());
     }
@@ -292,14 +369,52 @@ public class SignUpPage extends TopMenuPage {
         return new SignUpPage(getDriver());
     }
 
+    public SignUpPage inputCity() {
+        input(new Credentials().getCity(), city);
+
+        return new SignUpPage(getDriver());
+    }
+
     public SignUpPage inputZipcode(String zipcode) {
         input(zipcode, this.zipcode);
 
         return new SignUpPage(getDriver());
     }
 
+    public SignUpPage inputZipcode() {
+        input(new Credentials().getZipcode(), zipcode);
+
+        return new SignUpPage(getDriver());
+    }
+
     public SignUpPage inputMobileNumber(String mobileNumber) {
         input(mobileNumber, this.mobileNumber);
+
+        return new SignUpPage(getDriver());
+    }
+
+    public SignUpPage inputMobileNumber() {
+        input(new Credentials().getMobileNumber(), mobileNumber);
+
+        return new SignUpPage(getDriver());
+    }
+
+    public SignUpPage fillSignUpPageSignUpForm() {
+        chooseMaleGender()
+                .inputPassword()
+                .inputDateOfBirth()
+                .selectNewsletterCheckBox()
+                .selectSpecialOffersCheckBox()
+                .inputFirstName()
+                .inputLastName()
+                .inputCompany()
+                .inputAddress()
+                .inputAddress2()
+                .selectCountry()
+                .inputState()
+                .inputCity()
+                .inputZipcode()
+                .inputMobileNumber();
 
         return new SignUpPage(getDriver());
     }

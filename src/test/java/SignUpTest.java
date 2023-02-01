@@ -11,7 +11,7 @@ public class SignUpTest extends BaseTest {
 
         SignUpPage signUpPage = openMainPage()
                 .clickSignUpLogin()
-                .fillSignUpForm()
+                .fillLoginPageSignUpForm()
                 .clickSignUpButton();
 
         Assert.assertTrue(signUpPage.isAccountInfoHeaderDisplayed());

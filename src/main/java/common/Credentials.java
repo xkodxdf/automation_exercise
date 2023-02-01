@@ -5,11 +5,12 @@ public class Credentials {
     private final String name = "test";
     private final String email = "onemoretest@fortest.com";
     private final String password = "letmeinplease";
-    private final String firstName = "Ed";
-    private final String lastName = "Edwards";
     private final String dayOfBirth = "11";
     private final String monthOfBirth = "11";
     private final String yearOfBirth = "1984";
+    private final String firstName = "Ed";
+    private final String lastName = "Edwards";
+    private final String company = "default_company";
     private final String address = "19 Test st.";
     private final String address2 = "22 Selenium st.";
     private final String country = "India";
@@ -41,6 +42,11 @@ public class Credentials {
     public String getLastName() {
 
         return lastName;
+    }
+
+    public String getCompany() {
+
+        return company;
     }
 
     public String getDayOfBirth() {

@@ -83,6 +83,11 @@ public class LoginPage extends TopMenuPage {
         return verifyElementVisibility((signUpHeader));
     }
 
+    public String getSignUpHeaderText() {
+
+        return getText(signUpHeader);
+    }
+
     public LoginPage inputSignUpName(String name) {
         input(name, SignUpName);
 

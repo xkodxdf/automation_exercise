@@ -115,6 +115,12 @@ public abstract class TopMenuPage extends BasePage {
         return getDriver().getCurrentUrl();
     }
 
+    @Override
+    public String getText(WebElement element) {
+
+        return element.getText();
+    }
+
     public LoginPage clickSignUpLogin() {
         click(signUpLoginLink);
 

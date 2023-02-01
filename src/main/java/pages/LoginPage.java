@@ -113,7 +113,7 @@ public class LoginPage extends TopMenuPage {
         return new LoginPage(getDriver());
     }
 
-    public LoginPage fillSignUpForm() {
+    public LoginPage fillLoginPageSignUpForm() {
         inputSignUpName();
         inputSignUpEmail();
 

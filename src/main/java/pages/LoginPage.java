@@ -3,6 +3,7 @@ package pages;
 import common.Credentials;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.bidi.log.Log;
 import org.openqa.selenium.support.FindBy;
 import pages.base_abstract.TopMenuPage;
 
@@ -87,6 +88,43 @@ public class LoginPage extends TopMenuPage {
     public String getSignUpHeaderText() {
 
         return getText(signUpHeader);
+    }
+
+    public LoginPage inputLoginEmail(String email) {
+        input(email, loginEmail);
+
+        return new LoginPage(getDriver());
+    }
+
+    public LoginPage inputLoginEmail() {
+        input(new Credentials().getEmail(), loginEmail);
+
+        return new LoginPage(getDriver());
+    }
+
+    public LoginPage inputLoginPassword(String password) {
+        input(password, loginPassword);
+
+        return new LoginPage(getDriver());
+    }
+
+    public LoginPage inputLoginPassword() {
+        input(new Credentials().getPassword(), loginPassword);
+
+        return new LoginPage(getDriver());
+    }
+
+    public LoginPage fillLoginPageLoginForm() {
+        inputLoginEmail();
+        inputLoginPassword();
+
+        return new LoginPage(getDriver());
+    }
+
+    public MainPage clickLoginButton() {
+        click(loginButton);
+
+        return new MainPage(getDriver());
     }
 
     public LoginPage inputSignUpName(String name) {

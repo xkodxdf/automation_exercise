@@ -8,7 +8,7 @@ import pages.base_abstract.TopMenuPage;
 public class DeleteAccountPage extends TopMenuPage {
 
     @FindBy(xpath = "//h2[@data-qa='account-deleted']/b")
-    private WebElement accountDeletedText;
+    private WebElement accountDeletedHeader;
 
     @FindBy(xpath = "//a[@data-qa='continue-button']")
     private WebElement continueButton;
@@ -19,19 +19,25 @@ public class DeleteAccountPage extends TopMenuPage {
     }
 
 
-    public WebElement getAccountDeletedText() {
+    public WebElement getAccountDeletedHeader() {
 
-        return accountDeletedText;
+        return accountDeletedHeader;
     }
 
     public WebElement getContinueButton() {
+
         return continueButton;
     }
 
 
     public boolean isAccountDeletedTextDisplayed() {
 
-        return verifyElementVisibility(accountDeletedText);
+        return verifyElementVisibility(accountDeletedHeader);
+    }
+
+    public String getAccDeletedHeaderText() {
+
+        return getText(accountDeletedHeader);
     }
 
     public MainPage clickContinueButton() {

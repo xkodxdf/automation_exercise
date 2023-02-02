@@ -1,9 +1,11 @@
 import common.BaseTest;
-
-import static org.testng.Assert.assertTrue;
-
+import common.Credentials;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.reporters.jq.Main;
+import pages.AccountCreatedPage;
 import pages.DeleteAccountPage;
+import pages.MainPage;
 
 
 public class DeleteAccountTest extends BaseTest {
@@ -11,15 +13,30 @@ public class DeleteAccountTest extends BaseTest {
     @Test
     public void testRegisterUser() {
 
-        DeleteAccountPage deleteAccountPage = openMainPage()
+        AccountCreatedPage accountCreatedPage = openMainPage()
                 .clickSignUpLogin()
                 .fillLoginPageSignUpForm()
                 .clickSignUpButton()
                 .fillSignUpPageSignUpForm()
-                .clickCreateAccount()
-                .clickContinueButton()
-                .clickDeleteAccount();
+                .clickCreateAccount();
 
-        assertTrue(deleteAccountPage.isAccountDeletedTextDisplayed());
+        String expectedHeaderText = "ACCOUNT CREATED!";
+
+        Assert.assertTrue(accountCreatedPage.isAccountCreatedHeaderDisplayed());
+        Assert.assertEquals(accountCreatedPage.getAccCreatedHeaderText(), expectedHeaderText);
+
+        MainPage mainPage = accountCreatedPage.clickContinueButton();
+
+        String expectedLoggedInText = "Logged in as " + new Credentials().getName();
+
+        Assert.assertTrue(mainPage.isLoggedInAsDisplayed());
+        Assert.assertEquals(mainPage.getLoggedInAsText(), expectedLoggedInText);
+
+        DeleteAccountPage deleteAccountPage = mainPage.clickDeleteAccount();
+
+        String expectedAccDeletedText = "ACCOUNT DELETED!";
+
+        Assert.assertTrue(deleteAccountPage.isAccountDeletedTextDisplayed());
+        Assert.assertEquals(deleteAccountPage.getAccDeletedHeaderText(), expectedAccDeletedText);
     }
 }

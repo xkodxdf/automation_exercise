@@ -35,8 +35,8 @@ public abstract class TopMenuPage extends BasePage {
     @FindBy(xpath = "//ul/li[8]/a")
     private WebElement contactUsLink;
 
-    @FindBy(xpath = "//a[text()[contains(.,'Logged in as')]]")
-    private WebElement loggedInAsText;
+    @FindBy(xpath = "//i[@class='fa fa-user']/parent::a")
+    private WebElement loggedInAs;
 
     @FindBy(xpath = "//a[@href='/delete_account']")
     private WebElement deleteAccount;
@@ -92,9 +92,9 @@ public abstract class TopMenuPage extends BasePage {
         return contactUsLink;
     }
 
-    public WebElement getLoggedInAsText() {
+    public WebElement getLoggedInAs() {
 
-        return loggedInAsText;
+        return loggedInAs;
     }
 
     public WebElement getDeleteAccount() {
@@ -130,6 +130,16 @@ public abstract class TopMenuPage extends BasePage {
     public boolean isLogoDisplayed() {
 
         return verifyElementVisibility(logo);
+    }
+
+    public boolean isLoggedInAsDisplayed() {
+
+        return verifyElementVisibility(loggedInAs);
+    }
+
+    public String getLoggedInAsText() {
+
+        return getText(loggedInAs);
     }
 
     public DeleteAccountPage clickDeleteAccount() {

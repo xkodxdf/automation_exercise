@@ -8,7 +8,7 @@ import pages.base_abstract.TopMenuPage;
 public class AccountCreatedPage extends TopMenuPage {
 
     @FindBy(xpath = "//h2[@data-qa='account-created']/b")
-    private WebElement accountCreatedText;
+    private WebElement accountCreatedHeader;
 
     @FindBy(xpath = "//a[@data-qa='continue-button']")
     private WebElement continueButton;
@@ -19,9 +19,9 @@ public class AccountCreatedPage extends TopMenuPage {
     }
 
 
-    public WebElement getAccountCreatedText() {
+    public WebElement getAccountCreatedHeader() {
 
-        return accountCreatedText;
+        return accountCreatedHeader;
     }
 
     public WebElement getContinueButton() {
@@ -30,9 +30,14 @@ public class AccountCreatedPage extends TopMenuPage {
     }
 
 
-    public boolean isAccountCreatedTextDisplayed() {
+    public boolean isAccountCreatedHeaderDisplayed() {
 
-        return verifyElementVisibility(accountCreatedText);
+        return verifyElementVisibility(accountCreatedHeader);
+    }
+
+    public String getAccCreatedHeaderText() {
+
+        return getText(accountCreatedHeader);
     }
 
     public MainPage clickContinueButton() {

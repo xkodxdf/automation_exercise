@@ -7,7 +7,7 @@ import pages.DeleteAccountPage;
 public class DeleteAccountTest extends BaseTest {
 
     @Test
-    public void testRegisterUser() {
+    public void testDeleteAccount() {
         String expectedAccDeletedText = "ACCOUNT DELETED!";
 
         DeleteAccountPage deleteAccountPage = openMainPage()

@@ -25,4 +25,19 @@ public class LoginPageTest extends BaseTest {
         Assert.assertEquals(loginPage.getLoginHeaderText(), expectedLoginHeaderText);
 
     }
+
+    @Test
+    public void testLoginIncorrectUser() {
+        String expectedErrorMessage = "Your email or password is incorrect!";
+
+        LoginPage loginPage = openMainPage().clickSignUpLogin();
+
+        loginPage
+                .inputLoginEmail("wrong@email.com")
+                .inputLoginPassword("wrongPassword")
+                .clickLoginButton();
+
+        Assert.assertTrue(loginPage.isLoginErrorMessageDisplayed());
+        Assert.assertEquals(loginPage.getLoginErrorText(), expectedErrorMessage);
+    }
 }

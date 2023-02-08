@@ -24,8 +24,8 @@ final class BaseUtils extends Config {
                 Assert.fail("!!!incorrect parameter in browser variable!!!\n" +
                         "BROWSER = " + BROWSER);
         }
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_TIMEOUT_SEC));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLY_WAIT_SEC));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(IMPLICITLY_WAIT_SEC));
 
         return driver;
     }

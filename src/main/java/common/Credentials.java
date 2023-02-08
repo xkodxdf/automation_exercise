@@ -5,6 +5,9 @@ public class Credentials {
     private final String name = "test";
     private final String email = "onemoretest@fortest.com";
     private final String password = "letmeinplease";
+    private final String loginName = "testForTest";
+    private final String loginEmail = "JohnPopcorn@gmail.com";
+    private final String loginPassword = "johnpopcornisawesome";
     private final String dayOfBirth = "11";
     private final String monthOfBirth = "11";
     private final String yearOfBirth = "1984";
@@ -32,6 +35,21 @@ public class Credentials {
     public String getPassword() {
 
         return password;
+    }
+
+    public String getLoginName() {
+
+        return loginName;
+    }
+
+    public String getLoginEmail() {
+
+        return loginEmail;
+    }
+
+    public String getLoginPassword() {
+
+        return loginPassword;
     }
 
     public String getFirstName() {

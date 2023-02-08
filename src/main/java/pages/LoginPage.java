@@ -34,6 +34,9 @@ public class LoginPage extends TopMenuPage {
     @FindBy(xpath = "//button[@data-qa='signup-button']")
     private WebElement signUpButton;
 
+    @FindBy(xpath = "//form[@action='/login']/p")
+    private WebElement loginFormErrorMessage;
+
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -63,6 +66,11 @@ public class LoginPage extends TopMenuPage {
     public WebElement getLoginButton() {
 
         return loginButton;
+    }
+
+    public WebElement getLoginFormErrorMessage() {
+
+        return loginFormErrorMessage;
     }
 
     public WebElement getSignUpName() {
@@ -137,6 +145,16 @@ public class LoginPage extends TopMenuPage {
         click(loginButton);
 
         return new MainPage(getDriver());
+    }
+
+    public boolean isLoginErrorMessageDisplayed() {
+
+        return verifyElementVisibility(loginFormErrorMessage);
+    }
+
+    public String getLoginErrorText() {
+
+        return getText(loginFormErrorMessage);
     }
 
     public LoginPage inputSignUpName(String name) {

@@ -23,4 +23,18 @@ public class TopMenuTest extends BaseTest {
 
         mainPage.clickDeleteAccount();
     }
+
+    @Test
+    public void testLoginCorrectUser() {
+        Credentials creds = new Credentials();
+        String expectedLoggedInText = "Logged in as " + new Credentials().getLoginName();
+
+        MainPage mainPage = openMainPage()
+                .clickSignUpLogin()
+                .inputLoginEmail(creds.getLoginEmail())
+                .inputLoginPassword(creds.getLoginPassword())
+                .clickLoginButton();
+
+        Assert.assertEquals(mainPage.getLoggedInAsText(), expectedLoggedInText);
+    }
 }

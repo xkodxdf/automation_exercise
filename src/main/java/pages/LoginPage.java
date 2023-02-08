@@ -3,8 +3,8 @@ package pages;
 import common.Credentials;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.bidi.log.Log;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.base_abstract.TopMenuPage;
 
 
@@ -81,8 +81,19 @@ public class LoginPage extends TopMenuPage {
     }
 
 
+    public boolean isLoginHeaderDisplayed() {
+
+        return verifyElementVisibility(loginHeader);
+    }
+
+    public String getLoginHeaderText() {
+
+        return getText(loginHeader);
+    }
+
     public boolean isSignUpHeaderDisplayed() {
-        return verifyElementVisibility((signUpHeader));
+
+        return verifyElementVisibility(signUpHeader);
     }
 
     public String getSignUpHeaderText() {
@@ -122,6 +133,7 @@ public class LoginPage extends TopMenuPage {
     }
 
     public MainPage clickLoginButton() {
+        getWait5().until(ExpectedConditions.elementToBeClickable(loginButton));
         click(loginButton);
 
         return new MainPage(getDriver());
@@ -159,6 +171,7 @@ public class LoginPage extends TopMenuPage {
     }
 
     public SignUpPage clickSignUpButton() {
+        getWait5().until(ExpectedConditions.elementToBeClickable(signUpButton));
         click(signUpButton);
 
         return new SignUpPage(getDriver());

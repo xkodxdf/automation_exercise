@@ -7,7 +7,7 @@ import pages.AccountCreatedPage;
 public class AccountCreatedTest extends BaseTest {
 
     @Test
-    public void testAccountCreatedHeader() {
+    public void testCreateNewAccount() {
         String expectedHeaderText = "ACCOUNT CREATED!";
 
         AccountCreatedPage accountCreatedPage = openMainPage()

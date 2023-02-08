@@ -14,4 +14,15 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(loginPage.isSignUpHeaderDisplayed());
         Assert.assertEquals(loginPage.getSignUpHeaderText(), expectedSignUpHeaderText);
     }
+
+    @Test
+    public void testLoginHeader() {
+        String expectedLoginHeaderText = "Login to your account";
+
+        LoginPage loginPage = openMainPage().clickSignUpLogin();
+
+        Assert.assertTrue(loginPage.isLoginHeaderDisplayed());
+        Assert.assertEquals(loginPage.getLoginHeaderText(), expectedLoginHeaderText);
+
+    }
 }

@@ -16,5 +16,6 @@ abstract class Config {
     final String FIREFOX_WINDOW_WIDTH = "--width=1920";
     final String FIREFOX_WINDOW_HEIGHT = "--height=1080";
     final int IMPLICITLY_WAIT_SEC = 10;
+    final int PAGE_LOAD_TIMEOUT_SEC = 180;
 
 }

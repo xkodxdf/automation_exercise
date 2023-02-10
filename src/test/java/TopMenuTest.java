@@ -8,7 +8,7 @@ public class TopMenuTest extends BaseTest {
 
     @Test
     public void testLoggedInText() {
-        String expectedLoggedInText = "Logged in as " + new Credentials().getName();
+        String expectedLoggedInText = "Logged in as " + getName();
 
         MainPage mainPage = openMainPage()
                 .clickSignUpLogin()
@@ -26,13 +26,11 @@ public class TopMenuTest extends BaseTest {
 
     @Test
     public void testLoginCorrectUser() {
-        Credentials creds = new Credentials();
-        String expectedLoggedInText = "Logged in as " + new Credentials().getLoginName();
+        String expectedLoggedInText = "Logged in as " + getLoginName();
 
         MainPage mainPage = openMainPage()
                 .clickSignUpLogin()
-                .inputLoginEmail(creds.getLoginEmail())
-                .inputLoginPassword(creds.getLoginPassword())
+                .fillLoginPageLoginForm()
                 .clickLoginButton();
 
         Assert.assertEquals(mainPage.getLoggedInAsText(), expectedLoggedInText);

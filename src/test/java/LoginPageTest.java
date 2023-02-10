@@ -40,4 +40,18 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(loginPage.isLoginErrorMessageDisplayed());
         Assert.assertEquals(loginPage.getLoginErrorText(), expectedErrorMessage);
     }
+
+    @Test
+    public void testUserLogOut() {
+        String loginPageUrl = "https://www.automationexercise.com/login";
+
+        LoginPage loginPage = openMainPage()
+                .clickSignUpLogin()
+                .fillLoginPageLoginForm()
+                .clickLoginButton()
+                .clickLogOut();
+
+        Assert.assertEquals(loginPage.getCurrentUrl(), loginPageUrl);
+        Assert.assertTrue(loginPage.getSignUpLoginLink().isDisplayed());
+    }
 }

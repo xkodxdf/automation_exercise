@@ -8,7 +8,7 @@ import pages.LoginPage;
 import pages.MainPage;
 
 
-public abstract class BaseTest {
+public abstract class BaseTest extends Credentials {
 
     private WebDriver driver;
     private final String BASE_URL = "https://www.automationexercise.com/";
@@ -40,7 +40,7 @@ public abstract class BaseTest {
         beforeMethod();
         LoginPage loginPage = openMainPage().clickSignUpLogin();
         loginPage
-                .fillLoginPageLoginForm()
+                .fillLoginPageLoginForm(getEmail(), getPassword())
                 .clickLoginButton();
         if (loginPage.getCurrentUrl().equals(getBaseUrl())) {
             loginPage.clickDeleteAccount();

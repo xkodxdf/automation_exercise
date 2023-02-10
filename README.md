@@ -75,7 +75,16 @@
   <li><b>Test case 4</b>
     <ul>
       <li>
-        <p></p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainPageTest.java">MainPage</a>.testPageIsLoaded()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginPageTest.java">LoginPageTest</a>.testSignUpHeader()</p>
+      </li>
+     <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/TopMenuTest.java">TopMenuTest</a>.testLoginCorrectUser()</p>
+      </li> 
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginPageTest.java">LoginPageTest</a>.testUserLogOut()</p>
       </li>
     </ul>
   </li>

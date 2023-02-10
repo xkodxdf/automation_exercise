@@ -3,6 +3,7 @@ package pages.base_abstract;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.DeleteAccountPage;
 import pages.LoginPage;
 
@@ -11,28 +12,31 @@ public abstract class TopMenuPage extends BasePage {
     @FindBy(xpath = "//a[@href='/']/img")
     private WebElement logo;
 
-    @FindBy(xpath = "//ul/li[1]/a")
+    @FindBy(xpath = "//li/a[@href='/']")
     private WebElement homeLink;
 
-    @FindBy(xpath = "//ul/li[2]/a")
+    @FindBy(xpath = "//li/a[@href='/products']")
     private WebElement productsLink;
 
-    @FindBy(xpath = "//ul/li[3]/a")
+    @FindBy(xpath = "//li/a[@href='/view_cart']")
     private WebElement cartLink;
 
-    @FindBy(xpath = "//ul/li[4]/a")
+    @FindBy(xpath = "//li/a[@href='/login']")
     private WebElement signUpLoginLink;
 
-    @FindBy(xpath = "//ul/li[5]/a")
+    @FindBy(xpath="//a[@href='/logout']")
+    private WebElement logOutLink;
+
+    @FindBy(xpath = "//li/a[@href='/test_cases']")
     private WebElement testCasesLink;
 
-    @FindBy(xpath = "//ul/li[6]/a")
+    @FindBy(xpath = "//li/a[@href='/api_list']")
     private WebElement apiTestingLink;
 
-    @FindBy(xpath = "//ul/li[7]/a")
+    @FindBy(xpath = "//i[@class='fa fa-youtube-play']/parent::a")
     private WebElement videoTutorsLink;
 
-    @FindBy(xpath = "//ul/li[8]/a")
+    @FindBy(xpath = "//a[@href='/contact_us']")
     private WebElement contactUsLink;
 
     @FindBy(xpath = "//i[@class='fa fa-user']/parent::a")
@@ -70,6 +74,11 @@ public abstract class TopMenuPage extends BasePage {
     public WebElement getSignUpLoginLink() {
 
         return signUpLoginLink;
+    }
+
+    public WebElement getLogOutLink() {
+
+        return logOutLink;
     }
 
     public WebElement getTestCasesLink() {
@@ -123,6 +132,12 @@ public abstract class TopMenuPage extends BasePage {
 
     public LoginPage clickSignUpLogin() {
         click(signUpLoginLink);
+
+        return new LoginPage(getDriver());
+    }
+
+    public LoginPage clickLogOut() {
+        click(logOutLink);
 
         return new LoginPage(getDriver());
     }

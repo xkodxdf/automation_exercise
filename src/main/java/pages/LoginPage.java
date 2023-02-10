@@ -116,7 +116,7 @@ public class LoginPage extends TopMenuPage {
     }
 
     public LoginPage inputLoginEmail() {
-        input(new Credentials().getEmail(), loginEmail);
+        input(new Credentials().getLoginEmail(), loginEmail);
 
         return new LoginPage(getDriver());
     }
@@ -128,7 +128,14 @@ public class LoginPage extends TopMenuPage {
     }
 
     public LoginPage inputLoginPassword() {
-        input(new Credentials().getPassword(), loginPassword);
+        input(new Credentials().getLoginPassword(), loginPassword);
+
+        return new LoginPage(getDriver());
+    }
+
+    public LoginPage fillLoginPageLoginForm(String email, String password) {
+        inputLoginEmail(email);
+        inputLoginPassword(password);
 
         return new LoginPage(getDriver());
     }
@@ -141,7 +148,6 @@ public class LoginPage extends TopMenuPage {
     }
 
     public MainPage clickLoginButton() {
-        getWait5().until(ExpectedConditions.elementToBeClickable(loginButton));
         click(loginButton);
 
         return new MainPage(getDriver());
@@ -181,6 +187,13 @@ public class LoginPage extends TopMenuPage {
         return new LoginPage(getDriver());
     }
 
+    public LoginPage fillLoginPageSignUpForm(String name, String email) {
+        inputSignUpName(name);
+        inputSignUpEmail(email);
+
+        return new LoginPage(getDriver());
+    }
+
     public LoginPage fillLoginPageSignUpForm() {
         inputSignUpName();
         inputSignUpEmail();
@@ -189,7 +202,6 @@ public class LoginPage extends TopMenuPage {
     }
 
     public SignUpPage clickSignUpButton() {
-        getWait5().until(ExpectedConditions.elementToBeClickable(signUpButton));
         click(signUpButton);
 
         return new SignUpPage(getDriver());

@@ -51,7 +51,6 @@ public abstract class BasePage {
     protected abstract String getText(WebElement element);
 
     protected void click(WebElement element) {
-        getWait5().until(ExpectedConditions.visibilityOf(element));
         getWait5().until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 

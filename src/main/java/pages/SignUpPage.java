@@ -9,6 +9,9 @@ import pages.base_abstract.TopMenuPage;
 
 public class SignUpPage extends TopMenuPage {
 
+    @FindBy(xpath = "//form[@action='/signup']/p")
+    private WebElement emailAlreadyExistError;
+
     @FindBy(xpath = "//div[@class='login-form']/h2")
     private WebElement accountInfoHeader;
 
@@ -74,6 +77,11 @@ public class SignUpPage extends TopMenuPage {
         super(driver);
     }
 
+
+    public WebElement getEmailAlreadyExistError() {
+
+        return emailAlreadyExistError;
+    }
 
     public WebElement getAccountInfoHeader() {
 
@@ -175,6 +183,11 @@ public class SignUpPage extends TopMenuPage {
         return createAccountButton;
     }
 
+
+    public boolean isEmailAlreadyExistErrDisplayed() {
+
+        return verifyElementVisibility(emailAlreadyExistError);
+    }
 
     public boolean isAccountInfoHeaderDisplayed() {
 

@@ -55,6 +55,7 @@ public abstract class BasePage {
     }
 
     protected boolean verifyElementVisibility(WebElement element) {
+        getWait5().until(ExpectedConditions.visibilityOf(element));
 
         return element.isDisplayed();
     }

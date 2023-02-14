@@ -15,10 +15,10 @@
   <li><b>Test case 1</b>
     <ul>
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainPageTest.java">MainPage</a>.testPageIsLoaded()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
       </li>
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginPageTest.java">LoginPageTest</a>.testSignUpHeader()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginTest.java">LoginTest</a>.testSignUpHeader()</p>
       </li>
       <li>
         <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/SignUpTest.java">SignUpTest</a>.testAccountInformationHeader()</p>
@@ -40,10 +40,10 @@
   <li><b>Test case 2</b>
     <ul>
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainPageTest.java">MainPage</a>.testPageIsLoaded()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
       </li>
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginPageTest.java">LoginPageTest</a>.testLoginHeader()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginTest.java">LoginTest</a>.testLoginHeader()</p>
       </li>
       <li>
         <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/TopMenuTest.java">TopMenuTest</a>.testLoginCorrectUser()</p>
@@ -59,13 +59,13 @@
   <li><b>Test case 3</b>
     <ul>
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainPageTest.java">MainPage</a>.testPageIsLoaded()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
       </li>
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginPageTest.java">LoginPageTest</a>.testLoginHeader()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginTest.java">LoginTest</a>.testLoginHeader()</p>
       </li>
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginPageTest.java">LoginPageTest</a>.testLoginIncorrectUser()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginTest.java">LoginTest</a>.testLoginIncorrectUser()</p>
       </li>
     </ul>
   </li>
@@ -75,16 +75,86 @@
   <li><b>Test case 4</b>
     <ul>
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainPageTest.java">MainPage</a>.testPageIsLoaded()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
       </li>
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginPageTest.java">LoginPageTest</a>.testSignUpHeader()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginTest.java">LoginTest</a>.testSignUpHeader()</p>
       </li>
      <li>
         <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/TopMenuTest.java">TopMenuTest</a>.testLoginCorrectUser()</p>
       </li> 
       <li>
-        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginPageTest.java">LoginPageTest</a>.testUserLogOut()</p>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginTest.java">LoginTest</a>.testUserLogOut()</p>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b>Test case 5</b>
+    <ul>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
+      </li> 
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/LoginTest.java">LoginTest</a>.testSignUpHeader()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/SignUpTest.java">SignUpTest</a>.testRegistrationWithExistingEmail()</p>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b></b>
+    <ul>
+      <li>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b></b>
+    <ul>
+      <li>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b></b>
+    <ul>
+      <li>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b></b>
+    <ul>
+      <li>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b></b>
+    <ul>
+      <li>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b></b>
+    <ul>
+      <li>
       </li>
     </ul>
   </li>

@@ -3,7 +3,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-public class LoginPageTest extends BaseTest {
+public class LoginTest extends BaseTest {
 
     @Test
     public void testSignUpHeader() {

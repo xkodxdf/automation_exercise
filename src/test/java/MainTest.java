@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import pages.MainPage;
 
 
-public class MainPageTest extends BaseTest {
+public class MainTest extends BaseTest {
 
     @Test
     public void testPageIsLoaded() {

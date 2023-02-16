@@ -17,4 +17,15 @@ public class MainTest extends BaseTest {
         Assert.assertEquals(mainPage.getTitle(), expectedTitle);
         Assert.assertTrue(mainPage.getLogo().isDisplayed());
     }
+
+    @Test
+    public void testBackHomeAfterSubmitContactUsForm() {
+        openMainPage()
+                .clickContactUs()
+                .fillContactUsForm()
+                .clickSubmit()
+                .clickHome();
+
+        Assert.assertEquals(getDriver().getCurrentUrl(), getBaseUrl());
+    }
 }

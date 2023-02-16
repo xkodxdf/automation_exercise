@@ -3,7 +3,7 @@ package pages.base_abstract;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.ContactUsPage;
 import pages.DeleteAccountPage;
 import pages.LoginPage;
 
@@ -24,7 +24,7 @@ public abstract class TopMenuPage extends BasePage {
     @FindBy(xpath = "//li/a[@href='/login']")
     private WebElement signUpLoginLink;
 
-    @FindBy(xpath="//a[@href='/logout']")
+    @FindBy(xpath = "//a[@href='/logout']")
     private WebElement logOutLink;
 
     @FindBy(xpath = "//li/a[@href='/test_cases']")
@@ -140,6 +140,12 @@ public abstract class TopMenuPage extends BasePage {
         click(logOutLink);
 
         return new LoginPage(getDriver());
+    }
+
+    public ContactUsPage clickContactUs() {
+        click(contactUsLink);
+
+        return new ContactUsPage(getDriver());
     }
 
     public boolean isLogoDisplayed() {

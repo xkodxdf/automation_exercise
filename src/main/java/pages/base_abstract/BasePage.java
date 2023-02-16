@@ -64,4 +64,17 @@ public abstract class BasePage {
 
         element.sendKeys(text);
     }
+
+    protected void uploadFile(WebElement webEl, String pathToFile) {
+        getWait5().until(ExpectedConditions.visibilityOf(webEl));
+        webEl.sendKeys(pathToFile);
+    }
+
+    protected void acceptAlert() {
+        getDriver().switchTo().alert().accept();
+    }
+
+    protected void dismissAlert() {
+        getDriver().switchTo().alert().dismiss();
+    }
 }

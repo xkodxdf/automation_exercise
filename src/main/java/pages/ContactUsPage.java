@@ -131,7 +131,7 @@ public class ContactUsPage extends TopMenuPage {
     public ContactUsPage inputMessage() {
         input("Test test test test!", message);
 
-       return new ContactUsPage(getDriver());
+        return new ContactUsPage(getDriver());
     }
 
     public ContactUsPage uploadFile(String pathToFile) {

@@ -107,7 +107,26 @@
 
 <br>
 
-  <li><b></b>
+  <li><b>Test case 6</b>
+    <ul>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/ContactUsTest.java">ContactUsTest</a>.testContactUsFormHeader()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/ContactUsTest.java">ContactUsTest</a>.testContactUsFormSubmitting()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testBackHomeAfterSubmitContactUsForm()</p>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b>Test case 7</b>
     <ul>
       <li>
       </li>
@@ -116,7 +135,7 @@
 
 <br>
 
-  <li><b></b>
+  <li><b>Test case 8</b>
     <ul>
       <li>
       </li>
@@ -125,7 +144,7 @@
 
 <br>
 
-  <li><b></b>
+  <li><b>Test case 9</b>
     <ul>
       <li>
       </li>
@@ -134,16 +153,7 @@
 
 <br>
 
-  <li><b></b>
-    <ul>
-      <li>
-      </li>
-    </ul>
-  </li>
-
-<br>
-
-  <li><b></b>
+  <li><b>Test case 10</b>
     <ul>
       <li>
       </li>

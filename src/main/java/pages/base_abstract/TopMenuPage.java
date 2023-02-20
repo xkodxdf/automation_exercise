@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import pages.ContactUsPage;
 import pages.DeleteAccountPage;
 import pages.LoginPage;
+import pages.TestCasesPage;
 
 public abstract class TopMenuPage extends BasePage {
 
@@ -134,6 +135,12 @@ public abstract class TopMenuPage extends BasePage {
         click(signUpLoginLink);
 
         return new LoginPage(getDriver());
+    }
+
+    public TestCasesPage clickTestCases() {
+        click(testCasesLink);
+
+        return new TestCasesPage(getDriver());
     }
 
     public LoginPage clickLogOut() {

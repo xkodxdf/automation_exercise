@@ -129,6 +129,10 @@
   <li><b>Test case 7</b>
     <ul>
       <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/TestCasesTest.java">TestCasesTest</a>.testNavigateToTestCasesPage()</p>
       </li>
     </ul>
   </li>

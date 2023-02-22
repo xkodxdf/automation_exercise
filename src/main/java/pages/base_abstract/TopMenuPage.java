@@ -3,10 +3,7 @@ package pages.base_abstract;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.ContactUsPage;
-import pages.DeleteAccountPage;
-import pages.LoginPage;
-import pages.TestCasesPage;
+import pages.*;
 
 public abstract class TopMenuPage extends BasePage {
 
@@ -129,6 +126,12 @@ public abstract class TopMenuPage extends BasePage {
     public String getText(WebElement element) {
 
         return element.getText();
+    }
+
+    public ProductsPage clickProducts() {
+        click(productsLink);
+
+        return new ProductsPage(getDriver());
     }
 
     public LoginPage clickSignUpLogin() {

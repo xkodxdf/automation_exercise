@@ -12,7 +12,7 @@ public class TestCasesTest extends BaseTest {
 
         TestCasesPage testCasesPage = openMainPage().clickTestCases();
 
-        Assert.assertEquals(testCasesPage.getTitle(), expectedTitle);
         Assert.assertEquals(testCasesPage.getCurrentUrl(), expectedUrl);
+        Assert.assertEquals(testCasesPage.getTitle(), expectedTitle);
     }
 }

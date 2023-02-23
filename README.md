@@ -142,6 +142,13 @@
   <li><b>Test case 8</b>
     <ul>
       <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/ProductsTest.java">ProductsTest</a>.testNavigateToProductsPage()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/ProductsDetailsTest.java">ProductsDetailsTest</a>.testViewProduct()</p>
       </li>
     </ul>
   </li>

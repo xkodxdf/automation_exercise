@@ -11,6 +11,18 @@ import java.util.List;
 
 public class ProductsPage extends TopMenuPage {
 
+    @FindBy(xpath = "//input[@id='search_product']")
+    private WebElement searchProductInput;
+
+    @FindBy(xpath = "//button[@id='submit_search']")
+    private WebElement submitSearch;
+
+    @FindBy(xpath = "//h2[@class='title text-center']")
+    private WebElement h2SearchedProducts;
+
+    @FindBy(xpath = "//div[@class='features_items']/div[@class='col-sm-4']")
+    private List<WebElement> searchedProductsList;
+
     @FindBy(xpath = "//div[@class='features_items']")
     private WebElement productList;
 
@@ -25,6 +37,21 @@ public class ProductsPage extends TopMenuPage {
     }
 
 
+    public WebElement getSearchProductInput() {
+
+        return searchProductInput;
+    }
+
+    public WebElement getSubmitSearch() {
+
+        return submitSearch;
+    }
+
+    public WebElement getH2SearchedProducts() {
+
+        return h2SearchedProducts;
+    }
+
     public WebElement getProductList() {
 
         return productList;
@@ -33,6 +60,11 @@ public class ProductsPage extends TopMenuPage {
     public List<WebElement> getProductListContent() {
 
         return productListContent;
+    }
+
+    public List<WebElement> getSearchedProductsList() {
+
+        return searchedProductsList;
     }
 
 
@@ -46,5 +78,33 @@ public class ProductsPage extends TopMenuPage {
         System.out.println("--Quantity of elements in Product List: " + productListContent.size());
 
         return new ProductsDetailsPage(getDriver());
+    }
+
+    public ProductsPage clickSubmitSearch() {
+        click(submitSearch);
+
+        return new ProductsPage(getDriver());
+    }
+
+    public ProductsPage searchProduct(String textToSearch) {
+        searchProductInput.sendKeys(textToSearch);
+        clickSubmitSearch();
+
+        return new ProductsPage(getDriver());
+    }
+
+    public boolean isH2SearchedProductsDisplayed() {
+
+        return verifyElementVisibility(h2SearchedProducts);
+    }
+
+    public boolean isSearchedProductsDisplayed() {
+        for (WebElement el : searchedProductsList) {
+            if (! verifyElementVisibility(el)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

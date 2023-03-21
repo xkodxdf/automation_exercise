@@ -158,6 +158,13 @@
   <li><b>Test case 9</b>
     <ul>
       <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/ProductsTest.java">ProductsTest</a>.testNavigateToProductsPage()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/ProductsTest.java">ProductsTest</a>.testSearchProduct()</p>
       </li>
     </ul>
   </li>
@@ -173,7 +180,34 @@
 
 <br>
 
-  <li><b></b>
+  <li><b>Test case 11</b>
+    <ul>
+      <li>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b>Test case 12</b>
+    <ul>
+      <li>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b>Test case 13</b>
+    <ul>
+      <li>
+      </li>
+    </ul>
+  </li>
+
+<br>
+
+  <li><b>Test case 14</b>
     <ul>
       <li>
       </li>

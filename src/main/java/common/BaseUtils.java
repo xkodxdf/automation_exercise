@@ -14,7 +14,7 @@ final class BaseUtils extends Config {
         switch (BROWSER) {
             case chromeDriver:
                 System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-                driver = new ChromeDriver(chromeOptions.addArguments(CHROME_WINDOW_SIZE));
+                driver = new ChromeDriver(chromeOptions.addArguments(CHROME_WINDOW_SIZE, "--remote-allow-origins=*"));
                 break;
             case firefoxDriver:
                 System.setProperty("webdriver.gecko.driver", getGeckoDriverPath);

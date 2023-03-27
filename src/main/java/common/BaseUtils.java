@@ -1,5 +1,6 @@
 package common;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,11 +14,11 @@ final class BaseUtils extends Config {
         WebDriver driver = null;
         switch (BROWSER) {
             case chromeDriver:
-                System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver(chromeOptions.addArguments(CHROME_WINDOW_SIZE, "--remote-allow-origins=*"));
                 break;
             case firefoxDriver:
-                System.setProperty("webdriver.gecko.driver", getGeckoDriverPath);
+                WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver(firefoxOptions.addArguments(FIREFOX_WINDOW_WIDTH, FIREFOX_WINDOW_HEIGHT));
                 break;
             default:

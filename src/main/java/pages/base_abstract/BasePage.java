@@ -1,5 +1,6 @@
 package pages.base_abstract;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -76,5 +77,10 @@ public abstract class BasePage {
 
     protected void dismissAlert() {
         getDriver().switchTo().alert().dismiss();
+    }
+
+    protected void scrollToElement(WebElement el) {
+        JavascriptExecutor jse = (JavascriptExecutor) getDriver();
+        jse.executeScript("arguments[0].scrollIntoView(true);", el);
     }
 }

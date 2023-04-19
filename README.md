@@ -174,6 +174,10 @@
   <li><b>Test case 10</b>
     <ul>
       <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/MainTest.java">MainTest</a>.testPageIsLoaded()</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/xkodxdf/AutomationExercise/blob/main/src/test/java/FooterTest.java">FooterTest</a>.testSubscription()</p>
       </li>
     </ul>
   </li>

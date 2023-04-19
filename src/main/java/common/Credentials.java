@@ -21,8 +21,8 @@ public class Credentials {
     private final String city = "New Test";
     private final String zipcode = "4434523";
     private final String mobileNumber = "331210";
-    private final String txtFileForUploadPath = "C:\\Users\\sirot\\IdeaProjects\\"
-            + "AutomationExercise\\src\\test\\resources\\testUploadFile.txt";
+    private final String txtFileForUploadPath = System.getProperty("user.dir")
+            + "\\src\\test\\resources\\testUploadFile.txt";
 
     public String getName() {
 

@@ -178,4 +178,10 @@ public abstract class TopMenuPage extends BasePage {
 
         return new DeleteAccountPage(getDriver());
     }
+
+    public CartPage clickCart() {
+        click(cartLink);
+
+        return new CartPage(getDriver());
+    }
 }

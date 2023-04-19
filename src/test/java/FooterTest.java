@@ -12,10 +12,7 @@ public class FooterTest extends BaseTest {
 
         openMainPage();
         FooterPage footerPage = new FooterPage(getDriver());
-        footerPage
-                .scrollToSubscription()
-                .inputEmail()
-                .clickSubmitButton();
+        footerPage.subscribeToUpdates();
 
         Assert.assertEquals(footerPage.getSubscriptionH2text().getText(), expectedH2Text);
         Assert.assertTrue(footerPage.getSubscriptionSuccessMessage().isDisplayed());

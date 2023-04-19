@@ -67,4 +67,10 @@ public class FooterPage extends TopMenuPage {
     public void clickSubmitButton() {
         click(subscriptionSubmitButton);
     }
+
+    public void subscribeToUpdates() {
+        scrollToSubscription()
+                .inputEmail()
+                .clickSubmitButton();
+    }
 }

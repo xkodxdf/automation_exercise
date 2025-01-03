@@ -194,31 +194,5 @@
       </li>
     </ul>
   </li>
-
 <br>
-
-  <li><b>Test case 12</b>
-    <ul>
-      <li>
-      </li>
-    </ul>
-  </li>
-
-<br>
-
-  <li><b>Test case 13</b>
-    <ul>
-      <li>
-      </li>
-    </ul>
-  </li>
-
-<br>
-
-  <li><b>Test case 14</b>
-    <ul>
-      <li>
-      </li>
-    </ul>
-  </li>
 </ul>

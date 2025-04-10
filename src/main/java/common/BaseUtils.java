@@ -14,7 +14,7 @@ final class BaseUtils extends Config {
         WebDriver driver = null;
         switch (BROWSER) {
             case chromeDriver:
-                WebDriverManager.chromedriver().setup();
+                WebDriverManager.chromedriver().clearDriverCache().setup();
                 driver = new ChromeDriver(chromeOptions.addArguments(CHROME_WINDOW_SIZE, "--remote-allow-origins=*"));
                 break;
             case firefoxDriver:
